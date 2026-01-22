@@ -1,2 +1,1 @@
-# therry
-proyecto
+
