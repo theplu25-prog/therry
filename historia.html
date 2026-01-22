@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO DE ESTUDIANTES</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="LOGO FDO">
+        </div>
+        <center>
+            <h2>UNIDAD EDUCATIVA FISCAL</h2>
+            <p>"ENRIQUE GIL GILBERTO"</p>
+        </center>
+        <nav>
+            <ul>
+                <li><a href="historia.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="busqueda.html">Búsqueda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="historia">
+        <div class="historia-header">
+            <h2 align="center">Historia de la Institución</h2>        
+        </div>
+        <div class="contenedor">
+            <p>El Colegio Enrique Gil Gilbert, ubicado en Guayaquil, fue fundado en 1976 con el objetivo de ofrecer educación en áreas como comercio, administración y contabilidad, expandiendo sus instalaciones y servicios para satisfacer las necesidades de sus estudiantes y profesores. 
+ </p>
+        </div>
+        <section id="galeria">
+            <div class="galeria-header">
+              
+            </div>
+        
+            <div class="galeria-contenedor">
+                <div class="galeria-imagenes">
+                    <div class="imagen-item">
+                        <img src="foto.jpg" alt="Imagen 1">
+                        <div class="descripcion">Imabt mmn ntnh nyhnyhyygen 1</div>
+                    </div>
+                    <div class="imagen-item">
+                        <img src="foto1.jpg" alt="Imagen 2">
+                        <div class="descripcion">Imagentn tgrbhjbgjbgbhg hudgfyusgnfugsiifysrtny7grtyugtygr 2</div>
+                    </div>
+                    <div class="imagen-item">
+                        <img src="foto2.jpg" alt="Imagen 3">
+                        <div class="descripcion">Imagen 3</div>
+                    </div>
+                    <div class="imagen-item">
+                        <img src="foto3.jpg" alt="Imagen 4">
+                        <div class="descripcion">Imagen 4</div>
+                    </div>
+                    <div class="imagen-item">
+                        <img src="foto4.jpg" alt="Imagen 5">
+                        <div class="descripcion">Imagen 5</div>
+                    </div>
+                    <div class="imagen-item">
+                        <img src="foto5.jpg" alt="Imagen 6">
+                        <div class="descripcion">Imagen 6</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+        <div class="fila">
+            <div class="contenedor">
+                <strong>MISIÓN</strong>
+                <p>La misión del Colegio Enrique Gil Gilbert (actualmente Unidad Educativa Enrique Gil Gilbert) es ofrecer educación que permita a sus estudiantes lograr la meta de ser "bachiller de la República", con un enfoque particular en programas de comercio, administración y contabilidad desde su fundación en 1976. El colegio busca cumplir esta misión a pesar de las adversidades, adaptándose y mejorando sus instalaciones y servicios.  </p>
+            </div>
+            <div class="contenedor">
+                <strong>VISIÓN</strong>
+                <p>La visión del colegio Enrique Gil Gilbert, que aspira a ser un centro de excelencia educativa, se enfoca en formar estudiantes con una sólida formación académica y humana para enfrentar los retos del futuro, fomentando valores de responsabilidad, civismo y excelencia. Su meta es "ser bachiller de la República, un objetivo cumplido pese a las adversidades", buscando formar ciudadanos íntegros capaces de contribuir a la sociedad. </p>
+            </div>
+        </div>
+
+        <h1 align="center">ESPECIALIZACIONES QUE ENCONTRARÁS:</h1>
+
+        <div class="fila">
+            <div class="contenedor">
+                <strong>Informática</strong>
+                <p>La especialización en Informática está orientada a brindar a los estudiantes conocimientos y habilidades necesarias para desenvolverse en el mundo tecnológico, que es fundamental en la sociedad actual. Esta especialización se imparte en el nivel de Bachillerato, con un enfoque tanto teórico como práctico.</p>
+                <h3>Contenido Académico</h3>
+                <ul>
+                    <li>Programación y Base de Datos</li>
+                    <li>Sistemas Operativos y Redes</li>
+                    <li>Diseño y Desarrollo de la Web</li>
+                    <li>Soporte Técnico</li>
+                    <li>Aplicaciones Ofimáticas Locales y en Línea</li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <strong>Contabilidad</strong>
+                <p>Esta especialización está diseñada para proporcionar a los estudiantes las competencias necesarias en el ámbito contable, preparándolos para el mercado laboral o estudios superiores en áreas afines.</p>
+                <h3>Contenido Académico</h3>
+                <ul>
+                    <li>Contabilidad General</li>
+                    <li>Costos</li>
+                    <li>Bancaria</li>
+                    <li>Paquetes Contables</li>
+                    <li>Gestión de Talento Humano</li>
+                    <li>Emprendimiento</li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <strong>Gestion Administrativa</strong>
+                <p>La gestión administrativa está diseñada para optimizar y coordinar los recursos (humanos, financieros y materiales) de una organización para lograr sus objetivos de manera eficiente y efectiva.</p>
+                <h3>Contenido Académico</h3>
+                <ul>
+                    <li>Comunicación empresarial</li>
+                    <li>atención al cliente</li>
+                    <li>Operaciones administrativas de compra-venta</li>
+                    <li>Tratamiento informático de la información</li>
+                    <li>Técnica contable</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sistema de Registro Escolar</p>
+    </footer>
+    <script>
+        let index = 0;
+        const totalImages = document.querySelectorAll('.imagen-item').length;
+        const gallery = document.querySelector('.galeria-imagenes');
+
+        function moverGaleria() {
+            gallery.style.transition = 'transform 1s ease'; 
+            gallery.style.transform = `translateX(-${index * 400}px)`; 
+        }
+
+        function siguiente() {
+            if (index < totalImages - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            moverGaleria();
+        }
+
+        setInterval(siguiente, 2000);
+    </script>
+</body>
+</html>

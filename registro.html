@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="registro.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro Escolar</title>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="LOGO ">
+        </div>
+        <center>
+            <h2>UNIDAD EDUCATIVA FISCAL</h2>
+            <p>"ENRIQUE GIL GILBERTOft"</p>
+        </center>
+        <nav>
+            <ul>
+                <li><a href="historia.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="busqueda.html">Búsqueda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="formulario">
+            <h2>Registro de Estudiantes</h2>
+            <div class="form-container">
+                <select id="cursoSelect">
+                    <option value="octavo">Octavo</option>
+                    <option value="noveno">Noveno</option>
+                    <option value="decimo">Décimo</option>
+                    <option value="primeroBachillerato">Primero Bachillerato</option>
+                    <option value="segundoBachillerato">Segundo Bachillerato</option>
+                    <option value="terceroBachillerato">Tercero Bachillerato</option>
+                </select>
+                <div id="especialidadDiv" style="display: none;">
+                    <select id="especialidadSelect">
+                        <option value="informática">Informática</option>
+                        <option value="contabilidad">Contabilidad</option>
+                        <option value="gestion administrativa">Gestion Administrativa</option>
+                    </select>
+                </div>
+                <input type="text" id="nombreAlumno" placeholder="Nombre del Estudiante">
+                <input type="number" id="edadAlumno" placeholder="Edad" min="5">
+                <input type="text" id="cedulaAlumno" placeholder="Cédula">
+                <button id="agregarAlumno">Agregar Estudiante</button>
+            </div>
+        </section>
+
+        <section id="cursosListados" class="accordion"></section>
+    </main>
+   
+    <footer>
+        <p>&copy; 2025 Sistema de Registro Escolar</p>
+    </footer>
+    
+</body>
+<script src="script.js"></script>
+</html>

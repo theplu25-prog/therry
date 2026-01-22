@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="busqueda.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Estudiantes</title>
+</head>
+<body>
+    <header>
+        <h1>Búsqueda de Estudiantes</h1>
+    </header>
+
+    <main>
+        <section id="busqueda">
+            <h2>Buscar Estudiante</h2>
+            <input type="text" id="buscarInput" placeholder="Nombre o Cédula del Estudiante">
+            <button id="buscarBtn">Buscar</button>
+            <div id="resultadoBusqueda"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema de Registro Escolar</p>
+    </footer>
+
+    <script>
+        const estudiantesPorCurso = JSON.parse(localStorage.getItem("estudiantesPorCurso")) || {
+            octavo: [],
+            noveno: [],
+            decimo: [],
+            primeroBachillerato: [],
+            segundoBachillerato: [],
+            terceroBachillerato: []
+        };
+
+        const buscarInput = document.getElementById("buscarInput");
+        const buscarBtn = document.getElementById("buscarBtn");
+        const resultadoBusqueda = document.getElementById("resultadoBusqueda");
+
+        buscarBtn.addEventListener("click", () => {
+            const query = buscarInput.value.trim().toLowerCase();
+            if (!query) {
+                alert("Por favor ingrese un nombre o cédula.");
+                return;
+            }
+
+            let encontrado = false;
+            resultadoBusqueda.innerHTML = "";
+
+            for (const curso in estudiantesPorCurso) {
+                const estudiantes = estudiantesPorCurso[curso];
+                estudiantes.forEach(estudiante => {
+                    if (estudiante.nombre.toLowerCase().includes(query) || estudiante.cedula.includes(query)) {
+                        encontrado = true;
+                        const estudianteInfo = document.createElement("div");
+                        estudianteInfo.innerHTML = `<strong>Curso:</strong> ${curso} <br> <strong>Nombre:</strong> ${estudiante.nombre} <br> <strong>Edad:</strong> ${estudiante.edad} <br> <strong>Cédula:</strong> ${estudiante.cedula}`;
+                        if (estudiante.especialidad) {
+                            estudianteInfo.innerHTML += `<br><strong>Especialidad:</strong> ${estudiante.especialidad}`;
+                        }
+                        resultadoBusqueda.appendChild(estudianteInfo);
+                    }
+                });
+            }
+
+            if (!encontrado) {
+                resultadoBusqueda.innerHTML = "<p>No se encontraron estudiantes con esa búsqueda.</p>";
+            }
+        });
+    </script>
+</body>
+</html>
